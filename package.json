@@ -1,0 +1,31 @@
+{
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "Basic CRM Software",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "start-watch": "nodemon index.js",
+    "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\""
+  },
+  "author": "BABE Software",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "jquery": "^3.4.0",
+    "mongoose": "^5.3.6",
+    "popper.js": "^1.15.0",
+    "universal-cookie": "^3.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "nodemon": "^1.18.4"
+  },
+  "engines": {
+      "node": "8.15.1"
+  }
+}
